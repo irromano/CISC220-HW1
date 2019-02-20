@@ -34,6 +34,8 @@ int main() {
 	cout << "Hello, world!" << endl;
 	printStars();				//divider
 	cout << "Problem 3" << endl;
+	cout << isPrime(1) << endl; // '0' is expected.
+	cout << isPrime(2) << endl; // '1' is expected.
 	cout << isPrime(7) << endl; // '1' is expected.
 	cout << isPrime(9) << endl; // '0' is expected.
 	cout << isPrime(-1) << endl; // '0' is expected.
@@ -86,7 +88,7 @@ void printStars() {
  bool: True if num is a prime number. False otherwise.
  */
 bool isPrime(int num) {
-	if (num < 1)		// Return false if input is negative or zero.
+	if (num < 2)		// Return false if input is negative or zero.
 		return false;
 	int divisor = num - 1;
 	while (divisor > 1) {
